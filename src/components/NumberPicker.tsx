@@ -5,26 +5,35 @@ export interface CounterState {
 }
 
 export interface CounterProps {
-   maxOfClicks: number;
-   minOfClicks: number;
-   // Se pueden poner opcionales poniendo maxOfClicks?: number
+   numbersOfClicks?: number;
+   maxOfClicks?: number;
+   minOfClicks?: number;
+   // Se pueden poner opcionales poniendo maxOfClicks?: number u obligatorios quitando ?
 }
 
 
 export default class NumberPicker extends React.Component<CounterProps, CounterState> {
    constructor(props) {
       super(props);
+      this.checkValue(props);
       this.state = {
-         numbersOfClicks: 0
+         numbersOfClicks:  props.numbersOfClicks || 0
       };
 
+      /* Se anula porque debe recibir las propiedades desde el index.tsx
       this.props = {
          maxOfClicks: 3,
          minOfClicks: -3
-      };
+      };*/
 
       this.incrementCount = this.incrementCount.bind(this);
       this.decrementCount = this.decrementCount.bind(this);
+   }
+
+   checkValue(props: CounterProps) {
+      if (props.numbersOfClicks > props.maxOfClicks || props.numbersOfClicks < props.minOfClicks) {
+         throw new Error();
+      }
    }
 
    incrementCount() {
