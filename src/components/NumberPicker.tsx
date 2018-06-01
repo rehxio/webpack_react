@@ -4,6 +4,27 @@ export interface CounterState {
    numbersOfClicks: number;
 }
 
+// Con esto desechamos el archivo CSS
+const pickerComponentStyle: React.CSSProperties = {
+   display: 'flex',
+   justifyContent: 'space-between',
+   width: '20%'
+};
+
+const pickerCounterStyle: React.CSSProperties = {
+   justifyContent: 'center'
+};
+
+const pickerButtonsColorRed: React.CSSProperties = {
+   background: 'red',
+   borderRadius: '50%'
+};
+
+const pickerButtonsColorGreen: React.CSSProperties = {
+   background: 'green',
+   borderRadius: '50%'
+};
+
 export interface CounterProps {
    numbersOfClicks?: number;
    maxOfClicks?: number;
@@ -61,10 +82,10 @@ export default class NumberPicker extends React.Component<CounterProps, CounterS
    }
 
    render() {
-      return <div className='picker-component'>
-               <button className='countersum' onClick={this.incrementCount}>+</button>
-               <div className='counter'>{this.state.numbersOfClicks}</div>
-               <button className='counterrest' onClick={this.decrementCount}>-</button>
+      return <div style={pickerComponentStyle} className='picker-component'>
+               <button style={pickerButtonsColorGreen} className='countersum' onClick={this.incrementCount}>+</button>
+               <div style={pickerCounterStyle} className='counter'>{this.state.numbersOfClicks}</div>
+               <button style={pickerButtonsColorRed} className='counterrest' onClick={this.decrementCount}>-</button>
             </div>;
    }
 }
