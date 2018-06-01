@@ -1,0 +1,21 @@
+.picker-component {
+   display: flex;
+   justify-content: space-between;
+   width: 20%;
+}
+
+.counter {
+   justify-content: center;
+}
+
+button.countersum, button.counterrest {
+   border-radius: 50%;
+}
+
+button.countersum {
+   background: green;
+}
+
+button.counterrest {
+   background: red;
+}

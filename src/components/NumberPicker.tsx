@@ -61,7 +61,7 @@ export default class NumberPicker extends React.Component<CounterProps, CounterS
    }
 
    render() {
-      return <div>
+      return <div className='picker-component'>
                <button className='countersum' onClick={this.incrementCount}>+</button>
                <div className='counter'>{this.state.numbersOfClicks}</div>
                <button className='counterrest' onClick={this.decrementCount}>-</button>
