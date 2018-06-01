@@ -1,4 +1,4 @@
-.picker-component {
+.pickercomponent {
    display: flex;
    justify-content: space-between;
    width: 20%;
@@ -8,14 +8,16 @@
    justify-content: center;
 }
 
-button.countersum, button.counterrest {
+.genericButton {
    border-radius: 50%;
 }
 
-button.countersum {
+.countersum {
+   composes: genericButton;
    background: green;
 }
 
-button.counterrest {
+.counterrest {
+   composes: genericButton;
    background: red;
 }
