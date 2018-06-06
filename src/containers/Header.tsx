@@ -22,7 +22,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
 	}
 
 	decrement() {
-		this.props.counterStore.decrement(2);
+		this.props.counterStore.decrement(-2);
 	}
 
 	render() {

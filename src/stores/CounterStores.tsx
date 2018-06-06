@@ -8,6 +8,6 @@ export class CounterStore {
 	}
 
 	@action decrement(delta: number) {
-		this.counter = this.counter + delta;
+		this.counter = this.counter - delta;
 	}
 }
