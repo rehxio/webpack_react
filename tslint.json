@@ -10,11 +10,10 @@
       true,
       "check-space"
     ],
-    /*
     "indent": [
       true,
       "tabs"
-    ],*/
+    ],
     "interface-name": [
       true,
       "never-prefix"
